@@ -294,7 +294,7 @@ export const classDeclaration = (nodeName: string, node: RawNode): string => {
         return clause.types.map(classHeritageClause).join(", ");
       })
       .join(", ");
-    heritage = heritage.length > 0 ? `mixins ${heritage}` : "";
+    heritage = heritage.length > 0 ? `implements ${heritage}` : "";
   }
 
   const str = `declare ${printers.relationships.exporter(
